@@ -1,0 +1,61 @@
+﻿<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 clearLeftRightPadding">
+    <div class="slideshow-container" style="text-align:center;width:100%">
+
+        <div class="mySlides" style="width:100%">
+            <img class="slideShowImage" src="~/Images/SlidShow/img01.jpg" style="width:100%" />
+            <div class="text">قالی تبریز</div>
+        </div>
+
+        <div class="mySlides ">
+            <img class="slideShowImage" src="~/Images/SlidShow/img02.png" style="width:100%">
+            <div class="text">قالی کاشان</div>
+        </div>
+
+        <div class="mySlides ">
+            <img class="slideShowImage" src="~/Images/SlidShow/img03.jpg" style="width:100%">
+            <div class="text">قالی ابریشم قم</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+    var slideIndex = 0;
+    showSlides();
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            //$(slides[i]).fadeOut(2500);
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        //$(slides[slideIndex - 1]).fadeIn(5000);
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 3000); // Change image every 2 seconds
+    }
+    </script>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 firstPageText">
+    قدیمی‌ترین نمونه قالی ایرانی که یافته شده قالیچه‌ای است با نقوش اصیل هخامنشی که در گور یخ‌زده یکی از فرمانروایان سکایی در دره پازیریک در ۸۰ کیلومتری مغولستان بیرونی پیدا شده و قالی پازیریک نامیده می‌شود. پژوهشگران این قالی را از دست‌بافت‌های پارت‌ها و یا مادها می‌دانند.
+    قالی ایرانی از دیرباز معروف و مورد استفاده بوده. گزنفون تاریخ‌نگار یونانی در کتاب سیرت کوروش می‌نویسد: "ایرانیان برای این‌که بسترشان نرم باشد قالیچه زیر بستر خود می‌گسترند."
+    سالنامه چینی سوئی‌سو در دوره ساسانی از فرش پشمی ایران به عنوان کالای وارداتی به چین نام می‌برد.
+    فرش معروف بهارستان در کاخ تیسفون نیز به خاطر شکوهش بازتاب گسترده‌ای در ادبیات اسلامی داشته‌است.
+    هم‌اکنون ۴۰ درصد صادرات قالی ایرانی از طریق استان آذربایجان شرقی صورت می‌گیرد.
+
+</div>
